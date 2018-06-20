@@ -123,7 +123,7 @@ def won?(board)
         play(board)
       elsif won?(board)
         puts "Congratulations #{board[won?(board)[0]]}!"
-        elsif draw?(board)
+      elsif draw?(board)
         puts "Cat's Game!"
       end
     end
