@@ -121,9 +121,6 @@ def won?(board)
       until over?(board) do 
         turn(board)
       end
-      if !over?(board) 
-        turn(board)
-        play(board)
       if won?(board)
         puts "Congratulations #{board[won?(board)[0]]}!"
       elsif draw?(board)
