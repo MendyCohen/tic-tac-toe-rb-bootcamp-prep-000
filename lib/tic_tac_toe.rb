@@ -119,7 +119,7 @@ def won?(board)
   end
     
     def play(board)
-      #binding.pry
+      binding.pry
       until over?(board) do 
         turn(board)
       end
