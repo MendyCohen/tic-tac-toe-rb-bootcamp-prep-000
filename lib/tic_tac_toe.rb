@@ -67,7 +67,7 @@ def current_player(board)
 end 
 
 def won?(board)
-    WIN_COMBINATIONS.any? do |winning_combo|
+    WIN_COMBINATIONS.find do |winning_combo|
     win_index_1 = winning_combo[0]
     win_index_2 = winning_combo[1]
     win_index_3 = winning_combo[2]
@@ -77,12 +77,10 @@ def won?(board)
     position_3 = board[win_index_3]
      
     if position_1 == "X" && position_2 == "X" && position_3 == "X"
-      return winning_combo
+       winning_combo
       elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-      return winning_combo
-    else
-      false
-    end
+       winning_combo
+     end
     end
   end
   
