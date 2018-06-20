@@ -1,3 +1,4 @@
+require "pry"
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -118,6 +119,7 @@ def won?(board)
   end
     
     def play(board)
+      binding.pry
       until over?(board) do 
         turn(board)
       end
