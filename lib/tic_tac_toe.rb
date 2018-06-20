@@ -120,8 +120,9 @@ def won?(board)
     def play(board)
       if !over?(board) 
         turn(board)
-        elsif
-        play(board)
+        elsif play(board)
+        won?(board)
+        
       elsif won?(board)
         puts "Congratulations #{board[won?(board)[0]]}!"
   elsif draw?(board)
